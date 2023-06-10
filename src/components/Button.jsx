@@ -1,20 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import styles from '../styles/Global';
+import styles from "../styles/Global";
 
 const Button = ({ assetUrl, link }) => {
   return (
-    <div 
-      className={styles.btnBlack}
-      onClick={() => window.open(link, "_blank")}
-    >
+    <a className={styles.btnBlack} href={link} download="LilMan">
       <img src={assetUrl} alt="expo_icon" className={styles.btnIcon} />
       <div className="flex flex-col justify-start ml-4">
-        <p className={`${styles.btnText} font-normal text-xs`}>View it on</p>
-        <p className={`${styles.btnText} font-bold text-sm`}>Expo Store</p>
+        <p className={`${styles.btnText} font-normal text-xs`}>Download here</p>
+        <p className={`${styles.btnText} font-bold text-sm`}>LilMan</p>
       </div>
-    </div>
-  )
-}
+    </a>
+  );
+};
 
-export default Button
+export default Button;
